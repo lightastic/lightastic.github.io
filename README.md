@@ -1,2 +1,3 @@
 # lightastic.github.io
-Lighttastic's website
+
+Lighttastic's website: pure Holiday lighting delight!

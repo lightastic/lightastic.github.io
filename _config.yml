@@ -1,0 +1,5 @@
+# Jekyll config!
+# More info here: https://jekyllrb.com/docs/configuration/options/
+
+theme: jekyll-theme-hacker
+timezone: US/Pacific
