@@ -1,4 +1,8 @@
-# pequena
+---
+layout: project
+title: pequena
+description: The small, but mighty, level-shifted 4 channels board, based on ESP8266 or ESP32
+---
 
 `pequena` is the first release of the lightastic set of boards. Its a small board based on a ESP8266 or ESP32.
 

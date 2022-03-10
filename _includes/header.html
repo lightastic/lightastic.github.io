@@ -1,0 +1,58 @@
+<nav class="navbar has-shadow is-light">
+
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ site.url }}">
+      <img src="/img/lightastic.png" alt="lightastic logo" style="max-height: 70px" class="px-2 py-2">
+    </a>
+
+    <a class="navbar-burger" data-target="nav-links" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" id="nav-links">
+    <div class="navbar-start">
+      <a class="navbar-item" href="{{ site.url }}">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Projects
+        </a>
+
+        <div class="navbar-dropdown">
+          {%- assign projects = site.pages | where: "layout", "project" | sort -%}
+          {%- for p in projects -%}
+          <a class="navbar-item" href="{{ p.url }}">
+            {{ p.title }}
+          </a>
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- assign menu_pages = site.pages | where: "show_in_navbar.enabled", true | sort: "show_in_navbar.sequence" -%}
+      {%- for p in menu_pages -%}
+      <a class="navbar-item" href="{{ p.url }}">
+        {{ p.title }}
+      </a>
+      {%- endfor -%}
+
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+
+</nav>
