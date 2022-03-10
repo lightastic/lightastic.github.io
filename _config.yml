@@ -1,7 +1,7 @@
 # Jekyll config!
 # More info here: https://jekyllrb.com/docs/configuration/options/
 
-name: Lightastic
+title: Lightastic
 description: pure holiday lighting delight
 author: Marcelo Moreira
 url: https://lightastic.github.io
