@@ -2,9 +2,8 @@
 layout: page
 title: "About Us"
 permalink: /about/
-show_in_navbar:
-  enabled: true
-  sequence: 1
+show_in_navbar: true
+navbar_sequence: 1
 ---
 
 **Lightastic** is a set of projects I put together as a hobby.

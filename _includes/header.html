@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      {%- assign menu_pages = site.pages | where: "show_in_navbar.enabled", true | sort: "show_in_navbar.sequence" -%}
+      {%- assign menu_pages = site.pages | where: "show_in_navbar", true | sort: "navbar_sequence" -%}
       {%- for p in menu_pages -%}
       <a class="navbar-item" href="{{ p.url }}">
         {{ p.title }}
