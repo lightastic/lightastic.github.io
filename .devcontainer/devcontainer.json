@@ -4,8 +4,8 @@
 	"name": "lightastic.github.io",
 	"dockerFile": "Dockerfile",
 	"forwardPorts": [
-		4000,
-		35729
+		4000, // Jekyll serve
+		35729, // Livereload server
 	],
 	// Use 'settings' to set *default* container specific settings.json values on container create. 
 	// You can edit these settings after create using File > Preferences > Settings > Remote.
