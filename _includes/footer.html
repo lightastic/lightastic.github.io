@@ -20,9 +20,10 @@
     SITE = {{ site | jsonify }}
     collections = {{ site.pages | jsonify }}
     collections2 = {{ site.collections | jsonify }}
-    collections3 = {{ collections.pequena | jsonify }}
-    pequena_collection = {{ site.pequena | jsonify }}
+    collections3 = {{ collections.pequena | jsonify }} -- não funciona
+    pequena_collection = {{ site.pequena | jsonify }} -- igual a site. pages, mas para a collection
     {% endcomment %}
+
   </div>
 
 </footer>

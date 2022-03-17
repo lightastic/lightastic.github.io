@@ -18,7 +18,6 @@ bulma:
 
 github:
   url: https://github.com/lightastic/lightastic.github.io
-  path: blob/main
 
 # collections defines the collections in our site. collections follow the following rationale:
 #
