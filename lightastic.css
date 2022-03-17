@@ -3,26 +3,21 @@
   max-height: 100vh;
   position: sticky;
   top: 0;
-  /* overflow-y: auto; */
+  overflow-y: auto;
   display: inline-block;
   vertical-align: top;
 }
 
 /* block quote notifications */
 .content blockquote.notification.is-danger {
-  border-left-color: rgb(241 70 104);
-  background-color: rgb(251 236 239);
+  border-left-color: rgb(241, 70, 70);
+  background-color: rgb(255, 215, 215);
   color: rgb(74, 74, 74);
 }
 
 .content blockquote.notification.is-danger::before {
   content: '\f0e7';
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 2em;
-  margin-right: 6px;
-  float: left;
-  color: rgb(241 70 104);
+  color: rgb(241 70 70);
 }
 
 .content blockquote.notification.is-info {
@@ -33,26 +28,26 @@
 
 .content blockquote.notification.is-info::before {
   content: '\f05a';
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  font-size: 2em;
-  margin-right: 6px;
-  float: left;
   color: rgb(62 142 208);
 }
 
 .content blockquote.notification.is-warning {
-  border-left-color: rgb(255 224 138);
-  background-color: rgb(255 250 235);
+  border-left-color: rgb(240, 197, 78);
+  background-color: rgb(254 245 216);
   color: rgb(74, 74, 74);
 }
 
 .content blockquote.notification.is-warning::before {
   content: '\f071';
+  color:rgb(240, 197, 78);
+}
+
+.content blockquote.notification.is-danger::before,
+.content blockquote.notification.is-info::before,
+.content blockquote.notification.is-warning::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 2em;
   margin-right: 6px;
   float: left;
-  color:rgb(255 224 138);
 }
