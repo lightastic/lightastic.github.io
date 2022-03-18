@@ -47,3 +47,13 @@ collections:
     output: true
     project: pequena # This means this collection is a project. It will be featured in the nav bar.
     nav_order: 1 # this is the order that this project will appear in the nav. Lower ones are on top.
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pequena" # matches everything in the "pequena" collection
+    values:
+      project: pequena
+      showTOC: true
+      showIndex: true

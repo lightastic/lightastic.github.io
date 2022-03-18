@@ -30,17 +30,17 @@ window.addEventListener('load', (event) => {
     }
 
     var inSublist = false;
-    var tocHTML = "<ul>";
+    var tocHTML = ""; // we will build the HTML that will go inside a <ul></ul> here...
 
     headings.forEach(e => {
         if (e.tagName == "H1" || e.tagName == "H2") {
             if (inSublist) {
-                tocHTML += "</ul>";
+                tocHTML += "</ul></li>";
                 inSublist = false;
             }
         } else if (e.tagName == "H3") {
             if (!inSublist) {
-                tocHTML += "<ul>";
+                tocHTML += "<li><ul>";
                 inSublist = true;
             }
         }
@@ -48,9 +48,9 @@ window.addEventListener('load', (event) => {
     });
 
     if (inSublist) {
-        tocHTML += "</ul>";
+        tocHTML += "</ul></li>";
     }
-    tocHTML += "</ul>";
 
     toc.innerHTML = tocHTML;
+    toc.parentNode.classList.toggle('is-hidden');
 });

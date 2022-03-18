@@ -16,40 +16,44 @@
         </a>
     </li>
     <li>
-        <a href="{{ site.github.url }}/issues/new?title=Documentation%20Issue" class="sidebar-pagelinks" target="_blank">
+        <a href="{{ site.github.url }}/issues/new?title=Documentation%20Issue" class="sidebar-pagelinks"
+            target="_blank">
             <i class="fab fa-github fa-fw"></i> Create documentation issue
         </a>
     </li>
-    {% if page.collection %}
-    {% assign col = site.collections | where: collection, page.collection | first %}
+    {% if page.project %}
     <li>
-        <a href="{{ site.github.url }}/issues/new?title={{ 'Project Issue for ' | append: col.project | url_encode }}" class="sidebar-pagelinks" target="_blank">
+        <a href="{{ site.github.url }}/issues/new?title={{ 'Project Issue for ' | append: page.project | url_encode }}"
+            class="sidebar-pagelinks" target="_blank">
             <i class="fas fa-tasks fa-fw"></i> Create project issue
         </a>
     </li>
     {% endif %}
 </ul>
 
-<div class="td-toc">
-    <nav id="TableOfContents">
-        <ul>
-            <li><a href="#what-is-docsy">What is Docsy?</a></li>
-            <li><a href="#is-docsy-for-me">Is Docsy for me?</a></li>
-            <li><a href="#ready-to-get-started">Ready to get started?</a></li>
-        </ul>
-    </nav>
+{% if page.showTOC==true %}
+<div class="toc pt-3 has-text-grey menu is-hidden">
+    <p class="menu-label">
+        In this doc:
+    </p>
+    <ul class="menu-list is-size-7" id="TOC">
+        <!-- Document TOC will come in here. See lightastic.js for more info. -->
+    </ul>
 </div>
+{% endif %}
 
-<p>Categories</p>
-<div class="tags">
-    <a class="tag is-info is-rounded">Cat-1</a>
-    <a class="tag is-info is-rounded">Cat-2</a>
-    <a class="tag is-info is-rounded">Cat-3</a>
-</div>
+<div class="pt-3">
+    <p>Categories</p>
+    <div class="tags">
+        <a class="tag is-info is-rounded">Cat-1</a>
+        <a class="tag is-info is-rounded">Cat-2</a>
+        <a class="tag is-info is-rounded">Cat-3</a>
+    </div>
 
-<p>Tags</p>
-<div class="tags">
-    <span class="tag is-info is-rounded">Labelling</span>
-    <span class="tag is-info is-rounded">Tagging</span>
-    <span class="tag is-info is-rounded">Structuring Content</span>
+    <p>Tags</p>
+    <div class="tags">
+        <span class="tag is-info is-rounded">Labelling</span>
+        <span class="tag is-info is-rounded">Tagging</span>
+        <span class="tag is-info is-rounded">Structuring Content</span>
+    </div>
 </div>
