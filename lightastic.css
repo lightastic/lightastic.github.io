@@ -10,9 +10,9 @@
 
 /* block quote notifications */
 .content blockquote.notification.is-danger {
-  border-left-color: rgb(241, 70, 70);
-  background-color: rgb(255, 215, 215);
-  color: rgb(74, 74, 74);
+  border-left-color: rgb(241 70 70);
+  background-color: rgb(255 215 215);
+  color: rgb(74 74 74);
 }
 
 .content blockquote.notification.is-danger::before {
@@ -23,7 +23,7 @@
 .content blockquote.notification.is-info {
   border-left-color: rgb(62 142 208);
   background-color: rgb(203 231 255);
-  color: rgb(74, 74, 74);
+  color: rgb(74 74 74);
 }
 
 .content blockquote.notification.is-info::before {
@@ -32,14 +32,14 @@
 }
 
 .content blockquote.notification.is-warning {
-  border-left-color: rgb(240, 197, 78);
+  border-left-color: rgb(240 197 78);
   background-color: rgb(254 245 216);
-  color: rgb(74, 74, 74);
+  color: rgb(74 74 74);
 }
 
 .content blockquote.notification.is-warning::before {
   content: '\f071';
-  color:rgb(240, 197, 78);
+  color:rgb(240 197 78);
 }
 
 .content blockquote.notification.is-danger::before,
@@ -50,4 +50,12 @@
   font-size: 2em;
   margin-right: 6px;
   float: left;
+}
+
+a.sidebar-pagelinks {
+  color: rgb(146 178 207);
+}
+
+div.menu p.menu-label {
+  color: rgb(114 51 51);
 }

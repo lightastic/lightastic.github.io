@@ -32,28 +32,26 @@
 </ul>
 
 {% if page.showTOC==true %}
-<div class="toc pt-3 has-text-grey menu is-hidden">
+<div class="toc pt-3 has-text-grey menu">
     <p class="menu-label">
         In this doc:
     </p>
-    <ul class="menu-list is-size-7" id="TOC">
-        <!-- Document TOC will come in here. See lightastic.js for more info. -->
-    </ul>
+    {% include toc.html html=content sanitize=true class="menu-list is-size-7" h_min=2 h_max=3 %}
 </div>
 {% endif %}
 
 <div class="pt-3">
     <p>Categories</p>
     <div class="tags">
-        <a class="tag is-info is-rounded">Cat-1</a>
-        <a class="tag is-info is-rounded">Cat-2</a>
-        <a class="tag is-info is-rounded">Cat-3</a>
+        <a class="tag is-info is-light is-rounded">Cat-1</a>
+        <a class="tag is-info is-light is-rounded">Cat-2</a>
+        <a class="tag is-info is-light is-rounded">Cat-3</a>
     </div>
 
     <p>Tags</p>
     <div class="tags">
-        <span class="tag is-info is-rounded">Labelling</span>
-        <span class="tag is-info is-rounded">Tagging</span>
-        <span class="tag is-info is-rounded">Structuring Content</span>
+        <span class="tag is-info is-light is-rounded">Labelling</span>
+        <span class="tag is-info is-light is-rounded">Tagging</span>
+        <span class="tag is-info is-light is-rounded">Structuring Content</span>
     </div>
 </div>

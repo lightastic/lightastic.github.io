@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+<html {% if site.fixed_navbar %}class="has-navbar-fixed-{{ site.fixed_navbar }}"{% endif %}
+  lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {%- include head.html -%}
 
@@ -28,6 +29,12 @@
           {% endif %}
 
           {{ content }}
+
+          <nav class="pagination">
+            <a class="pagination-previous ml-6">Previous</a>
+            <a class="pagination-next mr-6">Next page</a>
+          </nav>
+
         </div>
 
         <aside class="column is-2" style="border-left: 1px solid rgb(222 222 222);">
@@ -36,6 +43,7 @@
 
       </div>
     </div>
+
   </main>
 
   {%- include footer.html -%}

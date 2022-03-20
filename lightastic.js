@@ -2,12 +2,13 @@
 window.addEventListener('load', (event) => {
 
     const burgerItem = document.querySelector('#burger');
-    const navbarMenu = document.querySelector('#nav-links');
+    const navbarMenu = document.querySelector('#nav-menu');
 
     burgerItem.addEventListener('click', () => {
         navbarMenu.classList.toggle('is-active');
     });
 });
+
 /*
 var firstDivContent = document.getElementById('mydiv1');
 var secondDivContent = document.getElementById('mydiv2');
@@ -16,6 +17,7 @@ Now just assign mydiv1's content to mydiv2.
 secondDivContent.innerHTML = firstDivContent.innerHTML;
 */
 
+/* TOC STUFF... no longer used
 window.addEventListener('load', (event) => {
     var toc = document.getElementById('TOC');
     if (toc == null) {
@@ -54,3 +56,4 @@ window.addEventListener('load', (event) => {
     toc.innerHTML = tocHTML;
     toc.parentNode.classList.toggle('is-hidden');
 });
+*/
