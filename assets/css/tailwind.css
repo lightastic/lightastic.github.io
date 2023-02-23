@@ -1,0 +1,82 @@
+/*
+The base:
+It is the first Tailwind CSS layer. It basically holds Preflight, which is the CSS in charge to reset the styles of the browser to something sane and constant between browser engines. Basically, what you see is what you will get on all devices.
+This is a good place to modify a base style, like changing how images behave by default — which with Tailwind CSS these are considered blocks — or if paragraphs should have a bottom margin.
+Note that here is very useful to add or modify anything want to make something more special than the default browser handling, but without going into full styling, since these styles must be overridable.
+
+The components:
+This is tiny layer that only includes the container class, which is in charge of modifying its width depending on the browser size. You usually see it being used to center content:
+In this layer you should add your own extracted components. For example, you could add a class called btn that would transform a link or a button into something that feels more like an actual pressable button.
+
+The utilities:
+This is the meat of Tailwind CSS. Here resides almost all of the classes you use to style your HTML: from padding and flex classes, to shadows and colors, to pseudo-classes to animations and transitions.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* sticky columns (https://github.com/jgthms/bulma/issues/1351) */
+    .is-sticky {
+        max-height: 100vh;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* block quote notifications */
+    .content blockquote.notification.is-danger {
+        border-left-color: rgb(241 70 70);
+        background-color: rgb(255 215 215);
+        color: rgb(74 74 74);
+    }
+
+    .content blockquote.notification.is-danger::before {
+        content: '\f0e7';
+        color: rgb(241 70 70);
+    }
+
+    .content blockquote.notification.is-info {
+        border-left-color: rgb(62 142 208);
+        background-color: rgb(203 231 255);
+        color: rgb(74 74 74);
+    }
+
+    .content blockquote.notification.is-info::before {
+        content: '\f05a';
+        color: rgb(62 142 208);
+    }
+
+    .content blockquote.notification.is-warning {
+        border-left-color: rgb(240 197 78);
+        background-color: rgb(254 245 216);
+        color: rgb(74 74 74);
+    }
+
+    .content blockquote.notification.is-warning::before {
+        content: '\f071';
+        color: rgb(240 197 78);
+    }
+
+    .content blockquote.notification.is-danger::before,
+    .content blockquote.notification.is-info::before,
+    .content blockquote.notification.is-warning::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 2em;
+        margin-right: 6px;
+        float: left;
+    }
+
+    a.sidebar-pagelinks {
+        color: rgb(146 178 207);
+    }
+
+    div.menu p.menu-label {
+        color: rgb(114 51 51);
+    }
+}

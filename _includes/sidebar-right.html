@@ -1,0 +1,16 @@
+{% if page.categories or page.tags %}
+<aside class="column is-1" style="border-left: 1px solid rgb(222 222 222);">
+    <p>Categories</p>
+    <div class="tags">
+        <a class="tag is-info is-light is-rounded">Cat-1</a>
+        <a class="tag is-info is-light is-rounded">Cat-2</a>
+        <a class="tag is-info is-light is-rounded">Cat-3</a>
+    </div>
+    <p>Tags</p>
+    <div class="tags">
+        <span class="tag is-info is-light is-rounded">Labelling</span>
+        <span class="tag is-info is-light is-rounded">Tagging</span>
+        <span class="tag is-info is-light is-rounded">Structuring Content</span>
+    </div>
+</aside>
+{% endif %}

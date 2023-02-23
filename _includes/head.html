@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% for s in site.data.cdn -%}
+  <!-- CDN for {{ s.name }} -->
+  {% if s.type == "script" %}
+  <script src="{{ s.src }}" {% if s.integrity %}integrity="{{ s.integrity }}"{% endif %} crossorigin="{{ s.crossorigin }}"></script>
+  {% elsif s.type == "stylesheet" %}
+  <link rel="stylesheet" href="{{ s.href }}" {% if s.integrity %}integrity="{{ s.integrity }}"{% endif %} crossorigin="{{ s.crossorigin }}"></script>
+  {% endif %}
+  {%- endfor -%}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <title>{{ page.title }} - {{ site.title }}</title>
+</head>

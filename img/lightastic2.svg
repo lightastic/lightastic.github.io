@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <title>Lightastic</title>
+ <defs>
+  <linearGradient id="gradient-0" x1="0.5" x2="0.5" y1="0" y2="1">
+   <stop offset="0" stop-color="rgba(249, 9, 9, 1)"/>
+   <stop offset="1" stop-color="rgba(152, 4, 4, 1)"/>
+  </linearGradient>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <rect fill="url(#gradient-0)" fill-rule="nonzero" height="346.39" id="svg_1" stroke="rgb(0, 0, 0)" width="307.07" x="75.55" y="65.46"/>
+  <rect fill="rgb(255, 255, 255)" fill-rule="nonzero" height="64.48" id="svg_2" rx="3.36" ry="3.36" stroke="rgb(0, 0, 0)" transform="matrix(1 0 0 1 0 0)" width="284.83" x="86.28" y="338.23"/>
+  <ellipse cx="115.78" cy="101.94" fill="rgb(255, 255, 255)" id="svg_3" rx="29.92" ry="29.92" stroke="rgb(0, 0, 0)" transform="matrix(1 0 0 1 0 0)"/>
+  <path d="m151.04,109.92c142,-2.05 219.78,217.06 206.21,214.89l-257.12,0c14.03,-106.16 157.35,-83.88 50.91,-214.88l0,-0.01z" fill="rgb(255, 255, 255)" id="svg_4" stroke="rgb(0, 0, 0)" transform="matrix(1 0 0 1 0 0)"/>
+ </g>
+</svg>

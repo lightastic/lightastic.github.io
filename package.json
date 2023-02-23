@@ -1,0 +1,12 @@
+{
+  "name": "lightastic.github.io",
+  "version": "0.0.1",
+  "description": "Pure Holiday Lighting Delight",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css",
+    "build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/main.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

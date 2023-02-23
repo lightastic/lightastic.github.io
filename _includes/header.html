@@ -1,0 +1,61 @@
+<nav class="navbar is-info {% if site.fixed_navbar %} is-fixed-{{ site.fixed_navbar }} {% endif %}">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ site.baseurl }}/">
+      <img src="/img/lightastic-whitefill.png" alt="lightastic logo" class="p-0">
+    </a>
+    <a class="navbar-item" href="{{ site.baseurl }}/" style="font-family: cursive; font-weight: bolder; font-size: x-large;">lightastic</a>
+
+    <a class="navbar-burger" data-target="nav-menu" id="burger" >
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" id="nav-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="{{ site.baseurl }}/">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Projects
+        </a>
+
+        <div class="navbar-dropdown">
+          {%- for c in site.collections | sort: "nav_order" -%}
+          {% if c.project %}
+          {% assign landing = site[c.project] | first %}
+          <a class="navbar-item" href="{{ landing.url }}">
+            {{ c.project }}
+          </a>
+          {% endif %}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      {%- assign menu_pages = site.pages | sort: "navbar_sequence" -%}
+      {%- for p in menu_pages -%}
+      {% if p.navbar_sequence %}
+      <a class="navbar-item" href="{{ p.url }}">
+        {{ p.title }}
+      </a>
+      {% endif %}
+      {%- endfor -%}
+
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item" href="https://github.com">
+        <span class="icon" style="color: var(--github);">
+          <i class="fa-brands fa-lg fa-github-alt"></i>
+        </span>
+      </a>
+      <a class="navbar-item" href="https://twitter.com">
+        <span class="icon" style="color: var(--twitter);">
+          <i class="fab fa-lg fa-twitter"></i>
+        </span>
+      </a>
+    </div>
+</nav>

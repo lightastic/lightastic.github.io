@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
+// https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go
+{
+	"name": "lightastic.github.io",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [
+		4000, // Jekyll's default port
+		35729 // Livereload server
+	],
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand": "go version",
+	// Comment out the next line to run as root
+	// "remoteUser": "vscode",
+	//]
+	"customizations": {
+		"vscode": {
+			// Use 'settings' to set *default* container specific settings.json values on container create. 
+			// You can edit these settings after create using File > Preferences > Settings > Remote.
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			},
+			"extensions": [
+				"eamodio.gitlens",
+				"redhat.vscode-yaml",
+				"DavidAnson.vscode-markdownlint",
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	}
+}

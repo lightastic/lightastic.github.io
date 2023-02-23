@@ -1,0 +1,10 @@
+{% if page.showPagination %}
+<nav class="pagination">
+    <a class="pagination-previous ml-6" {% if page.previous %}href="{{ page.previous.url }}">
+        Previous: {{ page.previous.title }}{% else %}disabled>Previous: --{% endif %}
+    </a>
+    <a class="pagination-next mr-6" {% if page.next %}href="{{ page.next.url }}">
+        Next: {{ page.next.title }}{% else %}disabled>Next: --{% endif %}
+    </a>
+</nav>
+{% endif %}

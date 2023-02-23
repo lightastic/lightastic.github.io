@@ -1,0 +1,64 @@
+# Jekyll config!
+# More info here: https://jekyllrb.com/docs/configuration/options/
+
+title: Lightastic
+description: pure holiday lighting delight
+author: Marcelo Moreira
+url: https://lightastic.github.io
+timezone: US/Pacific
+
+# Set the theme to null, to prevent githubpages from styling the default theme
+# https://github.com/github/pages-gem/issues/613
+theme: null
+
+exclude:
+  - img/*.xcf*
+  - assets/css/tailwind.css # this is the raw tailwindcss file, leave it alone...
+  - node_modules
+  - package*
+  - tailwind.config.js
+  - Gemfile*
+  - README.*
+
+github:
+  url: https://github.com/lightastic/lightastic.github.io
+
+# collections defines the collections in our site. collections follow the following rationale:
+#
+#     +-------------------------------------+         +----------------+
+#     | Can the things be logically grouped?|---No--->|    Use pages   |
+#     +-------------------------------------+         +----------------+
+#                     |
+#                    Yes
+#                     |
+#                     V
+#     +-------------------------------------+         +----------------+
+#     |      Are they grouped by date?      |---No--->|Use a collection|
+#     +-------------------------------------+         +----------------+
+#                     |
+#                    Yes
+#                     |
+#                     V
+#     +-------------------------------------+
+#     |            Use posts                |
+#     +-------------------------------------+
+#
+# For more information about jekyll collections, please visit
+# https://ben.balter.com/2015/02/20/jekyll-collections/
+collections:
+  pequena:
+    sort_by: weight # this is the metadata that defines the order of the pages in the collection.
+    output: true
+    project: pequena # This means this collection is a project. It will be featured in the nav bar.
+    nav_order: 1 # this is the order that this project will appear in the nav. Lower ones are on top.
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pequena" # matches everything in the "pequena" collection
+    values:
+      project: pequena
+      showTOC: true
+      showIndex: true
+      showPagination: true

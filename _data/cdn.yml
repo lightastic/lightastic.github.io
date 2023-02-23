@@ -1,0 +1,18 @@
+# These are the CDN entries that will be applied from head.html. Entries are applied
+# in the order they are defined in the file
+- name: Font Awesome 6 Free
+  type: script
+  src: https://kit.fontawesome.com/cd1a9b7cac.js
+  crossorigin: anonymous
+
+#- name: jquery
+#  type: script
+#  src: https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
+#  integrity: sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=
+#  crossorigin: anonymous
+
+- name: bulma
+  type: stylesheet
+  href: https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css
+  integrity: sha256-UDtbUHqpVVfXmdJcQVU/bfDEr9xldf3Dbd0ShD0Uf/Y=
+  crossorigin: anonymous

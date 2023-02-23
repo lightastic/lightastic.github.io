@@ -1,0 +1,18 @@
+{% if page.showIndex and page.project %}
+<aside class="column is-2 menu" style="border-right: 1px solid rgb(222 222 222);">
+    <div class="is-size-7">
+        <p class="menu-label is-size-7 has-text-weight-bold">
+            {{ page.project }}
+        </p>
+        <ul class="menu-list">
+            {%- for p in site[page.project] -%}
+            <li><a href="{{ p.url }}" {% if p.url==page.url %} class="is-active" {% endif %}>{{ p.title }}</a>
+                {% if page.showTOC and p.url==page.url %}
+                {% include toc.html html=content sanitize=true h_min=2 h_max=3 %}
+                {% endif %}
+            </li>
+            {%- endfor -%}
+        </ul>
+    </div>
+</aside>
+{% endif %}
